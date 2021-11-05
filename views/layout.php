@@ -24,8 +24,8 @@
                     <a href=" index.php">
                         <li>Home</li>
                     </a>
-                    <a href="products.php">
-                        <li>Products</li>
+                    <a href="items.php">
+                        <li>items</li>
                     </a>
                     <a href="contact.php">
                         <li>Contact Us</li>
