@@ -140,3 +140,14 @@ footer p {
 	height: auto;
 	width /***/:auto;
 }
+
+.itemImgWrap {
+	margin: 0 auto;
+}
+
+.sentence {
+	width: 400px;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
