@@ -117,3 +117,26 @@ footer p {
 
 
 /* loginのCSS */
+
+
+
+/* itemsのCSS */
+
+.grid {
+	display: grid;
+	gap: 35px;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.item img {
+	width: 100%;
+}
+
+
+/* itemDetailsのCSS */
+
+.itemImg {
+	max-width: 100%;
+	height: auto;
+	width /***/:auto;
+}
