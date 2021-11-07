@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+
+/* 全ページの共通部分 */
+
+html {
+	font-size: 100%;
+}
+
+* {
+	word-break: break-all;
+	letter-spacing: 2px;
+}
+
+main {
+	margin: 40px 0;
+	/* font-size: 15px; */
+	font-size: 0.95rem;
+	font-family: " 游ゴシック";
+}
+
+header, footer, .head-line-p {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: bold;
+	font-size: 1.075rem;
+}
+
+.ja {
+	font-weight: normal;
+	font-size: 0.95rem;
+}
+
+header, footer {
+	margin: 35px 0;
+}
+
+.container, .container a {
+	color: #838383;
+}
+
+nav a:hover, .link a:hover {
+	text-decoration: none;
+	color: #000;
+	transition: 1.0s;
+}
+
+header ul {
+		list-style-type: none;
+}
+
+header li {
+	margin-right: 50px;
+}
+
+header a img {
+	width: 25px;
+	height: 25px;
+}
+
+.head-line-outer {
+	background-color: #eaeaea;
+}
+
+.head-line-inner {
+	height: 80px;
+}
+
+.head-line-p {
+	margin: 0;
+}
+
+footer div img {
+		width: 40px;
+		height: 40px;
+		margin: 7px;
+	}
+
+footer p {
+	letter-spacing: 0.125rem;
+	margin: 0;
+}
+
+.footer-outer {
+	background-color: #f5f5f5;
+	/* f8f8f8 */
+	/* height: 13rem; */
+}
+
+
+/* indexのCSS */
+
+.top-visual {
+	margin-top: 0px;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../img/bk2.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.link-btn {
+	margin: 50px 0;
+}
+
+
+/* accessのCSS */
+
+.store-info {
+	margin: 40px auto;
+}
+
+.map {
+	margin-top: 30px;
+	width: 100%;
+}
+
+
+/* loginのCSS */
+
+
+
+/* itemsのCSS */
+
+.grid {
+	display: grid;
+	gap: 35px;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.item img {
+	width: 100%;
+}
+
+
+/* itemDetailsのCSS */
+
+.itemImg {
+	max-width: 100%;
+	height: auto;
+	width /***/:auto;
+}
+
+.itemImgWrap {
+	margin: 0 auto;
+}
+
+.sentence {
+	width: 400px;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+
+/* cartのCSS */
+.cartItemImg {
+	height: 7rem;
+	width: 7rem;
+}
+
+.cartItemName {
+	width: 150px;
+}
