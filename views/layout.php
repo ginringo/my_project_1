@@ -27,9 +27,9 @@
                     <a href="items.php">
                         <li>items</li>
                     </a>
-                    <a href="contact.php">
+                    <!-- <a href="contact.php">
                         <li>Contact Us</li>
-                    </a>
+                    </a> -->
                     <a href="access.php">
                         <li>Access</li>
                     </a>
