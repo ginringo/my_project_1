@@ -18,7 +18,7 @@
 
             <form action="" method="post" class="d-flex">
                 <div class="form-group mr-2">
-                    <select id="category" name="category" class="form-control">
+                    <select id="quantity" name="quantity" class="form-control">
                         <option value="">数量</option>
                         <option value="">1</option>
                         <option value="">2</option>
