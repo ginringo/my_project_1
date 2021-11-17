@@ -17,7 +17,7 @@ function validate($dbh)
     } elseif (mb_strlen($_POST['pass1']) < 8) {
         $errors['pass'] = 'パスワードは8文字以上で設定してください';
     }
-    $record = doubleCheck($_POST, $dbh);
+    $record = doubleCheck($dbh);
     if ($record['cnt'] > 0) {
         $errors['email'] = 'すでに登録されているメールアドレスです';
     }
