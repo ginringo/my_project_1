@@ -1,3 +1,11 @@
+<?php
+if (isset($_SESSION['id'])) {
+    $link = 'myAccount.php';
+} else {
+    $link = 'login.php';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,17 +35,11 @@
                     <a href="items.php">
                         <li>items</li>
                     </a>
-                    <!-- <a href="contact.php">
-                        <li>Contact Us</li>
-                    </a> -->
                     <a href="access.php">
                         <li>Access</li>
                     </a>
-                    <a href="login.php">
-                        <li>Login</li>
-                    </a>
-                    <a href="myAccount.php">
-                        <li>My Account</li>
+                    <a href="<?php echo $link ?>">
+                        <li>Login / My Account</li>
                     </a>
                 </ul>
                 <a href="cart.php">
