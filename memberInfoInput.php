@@ -7,7 +7,7 @@ if (!isset($_REQUEST['action'])) {
     $_REQUEST['action'] = '';
 }
 
-function validate($dbh)
+function validate($dbh, $cnt)
 {
     $errors = [];
     if ($_POST['pass1'] !== $_POST['pass2']) {
@@ -17,8 +17,7 @@ function validate($dbh)
     } elseif (mb_strlen($_POST['pass1']) < 8) {
         $errors['pass'] = 'パスワードは8文字以上で設定してください';
     }
-    $record = doubleCheck($dbh);
-    if ($record['cnt'] > 0) {
+    if ($cnt > 0) {
         $errors['email'] = 'すでに登録されているメールアドレスです';
     }
     return $errors;
@@ -26,7 +25,9 @@ function validate($dbh)
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dbh = dbConnect();
-    $errors = validate($dbh);
+    $sql = 'SELECT COUNT(*) AS "cnt" FROM member_info WHERE email=?';
+    $memberInfo = getMemberInfo($dbh, $sql, [$_POST['email']]);
+    $errors = validate($dbh, $memberInfo['cnt']);
 
     if (count($errors) === 0) {
         $_SESSION['memberInfo'] = $_POST;
