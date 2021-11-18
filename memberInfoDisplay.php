@@ -12,7 +12,6 @@ if (!isset($_SESSION['memberInfo'])) {
 if (!empty($_POST)) {
     $dbh = dbConnect();
     createMember($dbh);
-    // 会員登録後にマイアカウントに遷移できるようセッションにidをセット
     $sql = 'SELECT id FROM member_info WHERE email=? AND pass=?';
     $memberInfo = getMemberInfo($dbh, $sql, [$_SESSION['memberInfo']['email'], sha1($_SESSION['memberInfo']['pass1'])]);
     $_SESSION['id'] = $memberInfo['id'];
