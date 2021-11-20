@@ -7,7 +7,7 @@ if (!isset($_REQUEST['action'])) {
     $_REQUEST['action'] = '';
 }
 
-function validate($dbh, $cnt)
+function validate($cnt)
 {
     $errors = [];
     if ($_POST['pass1'] !== $_POST['pass2']) {
@@ -24,10 +24,9 @@ function validate($dbh, $cnt)
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $dbh = dbConnect();
     $sql = 'SELECT COUNT(*) AS "cnt" FROM member_info WHERE email=?';
-    $memberInfo = getMemberInfo($dbh, $sql, [$_POST['email']]);
-    $errors = validate($dbh, $memberInfo['cnt']);
+    $memberInfo = executeQuery($sql, [$_POST['email']]);
+    $errors = validate($memberInfo['cnt']);
 
     if (count($errors) === 0) {
         $_SESSION['memberInfo'] = $_POST;

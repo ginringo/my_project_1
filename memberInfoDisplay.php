@@ -10,12 +10,29 @@ if (!isset($_SESSION['memberInfo'])) {
 }
 
 if (!empty($_POST)) {
-    $dbh = dbConnect();
-    createMember($dbh);
-    $sql = 'SELECT id FROM member_info WHERE email=? AND pass=?';
-    $memberInfo = getMemberInfo($dbh, $sql, [$_SESSION['memberInfo']['email'], sha1($_SESSION['memberInfo']['pass1'])]);
-    $_SESSION['id'] = $memberInfo['id'];
 
+    $insert = 'INSERT INTO member_info VALUES(null, ?, ?, ?, ?, ?, null)';
+    executeQuery(
+        $insert,
+        [
+            $_SESSION['memberInfo']['name'],
+            $_SESSION['memberInfo']['address'],
+            $_SESSION['memberInfo']['email'],
+            $_SESSION['memberInfo']['tel'],
+            sha1($_SESSION['memberInfo']['pass1'])
+        ]
+    );
+
+    $select = 'SELECT id FROM member_info WHERE email=? AND pass=?';
+    $memberInfo = executeQuery(
+        $select,
+        [
+            $_SESSION['memberInfo']['email'], sha1($_SESSION['memberInfo']['pass1'])
+        ]
+    );
+
+    $_SESSION['id'] = $memberInfo['id'];
+    $_SESSION['time'] = time();
     unset($_SESSION['memberInfo']);
     header("Location: myAccount.php");
 }
