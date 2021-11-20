@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once __DIR__ . '/lib/pdo.php';
+require_once __DIR__ . '/lib/dbComponents.php';
 
 // 入力画面を介さずにこのページに遷移した場合入力画面に飛ばす
 if (!isset($_SESSION['memberInfo'])) {

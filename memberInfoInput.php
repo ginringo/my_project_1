@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once __DIR__ . '/lib/pdo.php';
+require_once __DIR__ . '/lib/dbComponents.php';
 
 if (!isset($_REQUEST['action'])) {
     $_REQUEST['action'] = '';
