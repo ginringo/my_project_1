@@ -10,7 +10,7 @@ if (isset($_SESSION['id'])) {
 
 if (!empty($_POST) && $_REQUEST['action'] === 'login') {
     $sql = 'SELECT * FROM member_info WHERE email=? AND pass=?';
-    $memberInfo = executeQuery($sql, [$_POST['email'], sha1($_POST['pass'])]);
+    $memberInfo = selectOneRow($sql, [$_POST['email'], sha1($_POST['pass'])]);
     if ($memberInfo) {
         // ログインしたユーザーの会員番号をセッションに保存
         $_SESSION['id'] = $memberInfo['id'];
