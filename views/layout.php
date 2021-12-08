@@ -22,8 +22,8 @@ if (isset($_SESSION['id'])) {
 
 <body>
     <!-- ヘッダー -->
-    <div class="container">
-        <header>
+    <header class="shadow-sm">
+        <div class="container">
             <nav class="d-flex justify-content-between align-items-center flex-wrap">
                 <a href="index.php">
                     <h4 class="m-0 p-0 font-weight-bold">Hoge</h4>
@@ -46,8 +46,8 @@ if (isset($_SESSION['id'])) {
                     <img src="img/cart.png" alt="cart">
                 </a>
             </nav>
-        </header>
-    </div>
+        </div>
+    </header>
 
 
     <!-- 必須項目の記号を変数で管理 -->
