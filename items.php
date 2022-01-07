@@ -53,6 +53,8 @@ function selected($get, $value)
 function highlight($category_id, $value)
 {
     if ($category_id == $value) {
-        return 'current-category';
+        return ' btn-dark';
+    } else {
+        return ' btn-outline-secondary';
     }
 }

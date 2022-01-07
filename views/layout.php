@@ -16,7 +16,8 @@ if (isset($_SESSION['id'])) {
     <title><?php echo $title ?>&nbsp;/&nbsp;Hoge</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Share+Tech&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,300;0,400;0,500;0,800;0,900;1,500&family=Noto+Sans+JP:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
@@ -26,20 +27,20 @@ if (isset($_SESSION['id'])) {
         <div class="container">
             <nav class="d-flex justify-content-between align-items-center flex-wrap">
                 <a href="index.php">
-                    <h4 class="m-0 p-0 font-weight-bold">Hoge</h4>
+                    <h4 class="header m-0 p-0 font-weight-normal">Hoge</h4>
                 </a>
                 <ul class="m-0 p-0 d-flex flex-row flex-wrap">
                     <a href=" index.php">
-                        <li>Home</li>
+                        <li class="header">Home</li>
                     </a>
                     <a href="items.php">
-                        <li>items</li>
+                        <li class="header">items</li>
                     </a>
                     <a href="access.php">
-                        <li>Access</li>
+                        <li class="header">Access</li>
                     </a>
                     <a href="<?php echo $link ?>">
-                        <li>Login / My Account</li>
+                        <li class="header">Login / My Account</li>
                     </a>
                 </ul>
                 <a href="cart.php">
@@ -64,7 +65,7 @@ if (isset($_SESSION['id'])) {
             <div class="head-line-inner container d-flex align-items-center">
                 <p class="head-line-p">
                     <?php echo $headLineEn; ?>
-                    <span class="ja"><?php echo $headLineJa; ?></span>
+                    <?php echo $headLineJa; ?>
                 </p>
             </div>
         </div>
@@ -82,8 +83,8 @@ if (isset($_SESSION['id'])) {
     <div class="footer-outer">
         <div class="container d-flex flex-column align-items-center">
             <footer class="text-center">
-                <p>Please Follow Us !</p>
-                <div class="mt-3 mb-3 d-flex justify-content-center flex-wrap">
+                <p class="footer">Please Follow Us !</p>
+                <div class=" mt-3 mb-3 d-flex justify-content-center flex-wrap">
                     <div>
                         <img src="img/facebook.svg" ;>
                         <img src="img/tw.svg" ;>
@@ -93,7 +94,7 @@ if (isset($_SESSION['id'])) {
                         <img src="img/ln.svg" ;>
                     </div>
                 </div>
-                <p>Copyright © Hoge Co., Ltd. All Rights Reserved.</p>
+                <p class="footer">Copyright © Hoge Co., Ltd. All Rights Reserved.</p>
             </footer>
         </div>
     </div>

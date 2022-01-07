@@ -6,6 +6,8 @@ require_once __DIR__ . '/lib/dbComponents.php';
 if (!isset($_SESSION['id'])) {
     header("Location: login.php");
 }
+unset($_SESSION['memberInfo']);
+var_dump($_SESSION);
 $sql = 'SELECT name FROM member_info WHERE id = ?';
 $memberInfo = selectOneRow($sql, [$_SESSION['id']]);
 $title = 'My Account';

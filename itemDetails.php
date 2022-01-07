@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 require_once __DIR__ . '/lib/dbComponents.php';
 
 $title = 'Item Details';
@@ -8,6 +9,6 @@ $headLineEn = 'Item Details / ';
 $headLineJa = 'アイテム詳細';
 
 $productSelect = 'SELECT * FROM products WHERE id = ?';
-$product = selectOneRow($productSelect, [$_REQUEST['product_id']]);
-
+$product = selectOneRow($productSelect, [$_GET['product_id']]);
+var_dump($_SESSION);
 include __DIR__ . '/views/layout.php';
