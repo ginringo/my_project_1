@@ -1,7 +1,12 @@
 <form action="memberInfoInput.php" method="post" class="row">
     <div class="col-sm-8 offset-sm-2">
         <?php foreach ($errors as $error) : ?>
-            <p class="text-danger">※<?php echo $error ?></p>
+            <p class="shadow-sm p-2 bg-white rounded text-danger">
+                <span class="font-weight-bold">×</span>&nbsp;<?php echo $error ?>
+            </p>
+            <?php if ($error === end($errors)) : ?>
+                <div class="mb-4"></div>
+            <?php endif; ?>
         <?php endforeach; ?>
         <!-- 氏名 -->
         <div class="form-group">

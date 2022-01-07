@@ -12,7 +12,7 @@ if (!isset($_SESSION['memberInfo'])) {
 if (!empty($_POST)) {
 
     $insert = 'INSERT INTO member_info VALUES(null, ?, ?, ?, ?, ?, null)';
-    executeQuery(
+    update(
         $insert,
         [
             $_SESSION['memberInfo']['name'],
@@ -24,16 +24,14 @@ if (!empty($_POST)) {
     );
 
     $select = 'SELECT id FROM member_info WHERE email=? AND pass=?';
-    $memberInfo = executeQuery(
+    $memberInfo = selectOneRow(
         $select,
-        [
-            $_SESSION['memberInfo']['email'], sha1($_SESSION['memberInfo']['pass1'])
-        ]
+        [$_SESSION['memberInfo']['email'], sha1($_SESSION['memberInfo']['pass1'])]
     );
 
     $_SESSION['id'] = $memberInfo['id'];
     $_SESSION['time'] = time();
-    unset($_SESSION['memberInfo']);
+    //unset($_SESSION['memberInfo']); NOTE: myAccountに移動
     header("Location: myAccount.php");
 }
 

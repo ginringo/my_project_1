@@ -25,7 +25,7 @@ function validate($cnt)
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = 'SELECT COUNT(*) AS "cnt" FROM member_info WHERE email=?';
-    $memberInfo = executeQuery($sql, [$_POST['email']]);
+    $memberInfo = selectOneRow($sql, [$_POST['email']]);
     $errors = validate($memberInfo['cnt']);
 
     if (count($errors) === 0) {

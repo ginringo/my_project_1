@@ -14,11 +14,26 @@ function dbConnect()
     }
 }
 
-// sql実行関数
-function executeQuery($sql, $bindParams)
+function update($sql, $bindParams)
 {
     $dbh = dbConnect();
     $stmt = $dbh->prepare($sql);
     $stmt->execute($bindParams);
-    return $stmt->fetch();
+    return $stmt->rowCount();
+}
+
+function selectAllRow($sql, $bindParams)
+{
+    $dbh = dbConnect();
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute($bindParams);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function selectOneRow($sql, $bindParams)
+{
+    $dbh = dbConnect();
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute($bindParams);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
 }

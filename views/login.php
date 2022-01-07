@@ -1,10 +1,12 @@
 <form action="login.php?action=login" method="post" class="row">
     <div class="col-sm-8 offset-sm-2">
 
-        <div class="link"><a href="memberInfoInput.php">会員登録がまだの方はこちらから</a></div>
+        <div class="link ml-2"><a href="memberInfoInput.php">会員登録がまだの方はこちらから</a></div>
         <hr>
         <?php if (isset($loginError)) : ?>
-            <p class="text-danger">※<?php echo $loginError ?></p>
+            <p class="shadow-sm p-2 bg-white rounded text-danger">
+                <span class="font-weight-bold">×&nbsp;</span><?php echo $loginError ?>
+            </p>
         <?php endif; ?>
         <!-- <div class="link mb-3"><a href="#">※&nbsp;パスワードを忘れた方はこちら</a></div> -->
 

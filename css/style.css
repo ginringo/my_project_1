@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 /* 全ページの共通部分 */
 
 html {
@@ -12,40 +11,46 @@ html {
 	letter-spacing: 2px;
 }
 
+body {
+	padding-top: 99px;
+}
+
 main {
 	margin: 40px 0;
-	/* font-size: 15px; */
-	font-size: 0.95rem;
-	font-family: " 游ゴシック";
-}
-
-header, footer, .head-line-p {
-	font-family: 'Alegreya Sans SC', sans-serif;
-	font-weight: bold;
-	font-size: 1.075rem;
-}
-
-.ja {
-	font-weight: normal;
 	font-size: 0.95rem;
 }
 
-header, footer {
-	margin: 35px 0;
+main, .head-line-p {
+	font-family: 'Work Sans', sans-serif;
 }
 
 .container, .container a {
+	color: #ABABAB;
+}
+
+.header, .head-line-p, .footer {
 	color: #838383;
 }
 
-nav a:hover, .link a:hover {
-	text-decoration: none;
-	color: #000;
-	transition: 1.0s;
+header, footer {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 400;
+	font-size: 1.075rem;
+	padding: 35px 0;
+	color: #838383;
+}
+
+header {
+		width: 100%;
+		background: #FFF;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
 }
 
 header ul {
-		list-style-type: none;
+	list-style-type: none;
 }
 
 header li {
@@ -67,6 +72,13 @@ header a img {
 
 .head-line-p {
 	margin: 0;
+	font-size: 0.95rem;
+}
+
+nav a:hover, .link a:hover {
+	text-decoration: none;
+	color: #000;
+	transition: 1.0s;
 }
 
 footer div img {
@@ -82,8 +94,6 @@ footer p {
 
 .footer-outer {
 	background-color: #f5f5f5;
-	/* f8f8f8 */
-	/* height: 13rem; */
 }
 
 
@@ -131,7 +141,6 @@ footer p {
 .item img {
 	width: 100%;
 }
-
 
 /* itemDetailsのCSS */
 
