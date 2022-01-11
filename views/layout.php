@@ -1,9 +1,20 @@
 <?php
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+$link = 'login.php';
 if (isset($_SESSION['id'])) {
     $link = 'myAccount.php';
-} else {
-    $link = 'login.php';
 }
+
+$quantity = 0;
+if (isset($_SESSION['products'])) {
+    $quantity = array_sum(array_column($_SESSION['products'], 'quantity'));
+    $quantity = $quantity > 99 ? 99 : $quantity;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +33,6 @@ if (isset($_SESSION['id'])) {
 </head>
 
 <body>
-    <!-- ヘッダー -->
     <header class="shadow-sm">
         <div class="container">
             <nav class="d-flex justify-content-between align-items-center flex-wrap">
@@ -43,9 +53,14 @@ if (isset($_SESSION['id'])) {
                         <li class="header">Login / My Account</li>
                     </a>
                 </ul>
-                <a href="cart.php">
-                    <img src="img/cart.png" alt="cart">
-                </a>
+                <div class="d-flex">
+                    <a href="cart.php">
+                        <img src="img/cart.png" alt="cart">
+                    </a>
+                    <?php if ($quantity != 0) : ?>
+                        <div class="cartCount rounded-circle bg-danger text-white"><?= $quantity ?></div>
+                    <?php endif ?>
+                </div>
             </nav>
         </div>
     </header>
@@ -79,7 +94,6 @@ if (isset($_SESSION['id'])) {
     </div>
 
 
-    <!-- フッター -->
     <div class="footer-outer">
         <div class="container d-flex flex-column align-items-center">
             <footer class="text-center">
