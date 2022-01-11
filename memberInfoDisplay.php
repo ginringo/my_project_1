@@ -29,7 +29,7 @@ if (!empty($_POST)) {
         [$_SESSION['memberInfo']['email'], sha1($_SESSION['memberInfo']['pass1'])]
     );
 
-    $_SESSION['id'] = $memberInfo['id'];
+    $_SESSION['member_id'] = $memberInfo['id'];
     $_SESSION['time'] = time();
     //unset($_SESSION['memberInfo']); NOTE: myAccountに移動
     header("Location: myAccount.php");

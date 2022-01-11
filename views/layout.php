@@ -5,7 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 $link = 'login.php';
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['member_id'])) {
     $link = 'myAccount.php';
 }
 
