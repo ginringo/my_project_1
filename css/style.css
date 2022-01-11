@@ -25,11 +25,11 @@ main, .head-line-p, .cartCount {
 }
 
 .container, .container a {
-	color: #ABABAB;
+	color: #555;
 }
 
-.header, .head-line-p, .footer {
-	color: #838383;
+.header, .footer {
+	color: #777;
 }
 
 header, footer {
@@ -37,7 +37,6 @@ header, footer {
 	font-weight: 400;
 	font-size: 1.075rem;
 	padding: 35px 0;
-	color: #838383;
 }
 
 header {
@@ -75,7 +74,7 @@ header a img {
 	font-size: 0.95rem;
 }
 
-nav a:hover, .link a:hover {
+.header:hover, nav a:hover, .link a:hover {
 	text-decoration: none;
 	color: #000;
 	transition: 1.0s;

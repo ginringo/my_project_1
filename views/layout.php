@@ -39,7 +39,7 @@ if (isset($_SESSION['products'])) {
                 <a href="index.php">
                     <h4 class="header m-0 p-0 font-weight-normal">Hoge</h4>
                 </a>
-                <ul class="m-0 p-0 d-flex flex-row flex-wrap">
+                <ul class="temp m-0 p-0 d-flex flex-row flex-wrap">
                     <a href=" index.php">
                         <li class="header">Home</li>
                     </a>
@@ -50,7 +50,7 @@ if (isset($_SESSION['products'])) {
                         <li class="header">Access</li>
                     </a>
                     <a href="<?php echo $link ?>">
-                        <li class="header">Login / My Account</li>
+                        <li class="header">Login / MyAccount</li>
                     </a>
                 </ul>
                 <div class="d-flex">

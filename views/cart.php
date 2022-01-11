@@ -40,7 +40,7 @@ $total = $subTotal + $tax;
             <hr>
         <?php endforeach; ?>
         <div class="mt-5 d-flex justify-content-between align-items-center flex-wrap shadow px-4 py-2 bg-light">
-            <p class="m-0 text-dark pl-4 h5">金額内訳</p>
+            <p class="m-0 text-body pl-4 h5">金額内訳</p>
             <table class="table table-borderless table-sm my-0" style="width: 200px;">
                 <tr>
                     <td class="d-flex justify-content-between border-bottom">
