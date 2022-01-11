@@ -10,5 +10,5 @@ $headLineJa = 'アイテム詳細';
 
 $productSelect = 'SELECT * FROM products WHERE id = ?';
 $product = selectOneRow($productSelect, [$_GET['product_id']]);
-var_dump($_SESSION);
+
 include __DIR__ . '/views/layout.php';

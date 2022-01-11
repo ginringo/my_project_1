@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-10 offset-sm-1 d-flex flex-wrap">
         <div class="itemImgWrap">
-            <img class="itemImg" src="../img/item1.png" alt="">
+            <img class="itemImg" src="<?= '../' . $product['path'] ?>" alt="">
         </div>
         <div class="sentence mt-3 d-flex align-content-between flex-wrap">
             <div class="sentence">
@@ -11,15 +11,14 @@
             </div>
 
             <?php if ($product['stock'] > 0) : ?>
-                <form action="" method="post" class="sentence d-flex justify-content-end flex-wrap">
-                    <div class="form-group mr-4">
-                        <select id="quantity" name="quantity" class="form-control">
-                            <option value="">数量</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                        </select>
+                <form action="cart.php" method="post" class="sentence d-flex justify-content-end flex-wrap">
+                    <div class="form-group mr-3">
+                        <input type="number" name="quantity" class="form-control" value="1" min="1" max="10" style="width: 65px;">
                     </div>
+                    <input type="hidden" name="id" value="<?= $product['id'] ?>">
+                    <input type="hidden" name="name" value="<?= $product['name'] ?>">
+                    <input type="hidden" name="price" value="<?= $product['price'] ?>">
+                    <input type="hidden" name="path" value="<?= $product['path'] ?>">
                     <div>
                         <button type="submit" class="btn btn-dark">カートに追加</button>
                     </div>
