@@ -2,8 +2,8 @@
 
 session_start();
 
-$_SESSION = [];
-session_destroy();
+unset($_SESSION['member_id']);
+unset($_SESSION['time']);
 
 header('Location: login.php');
 exit();
