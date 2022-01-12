@@ -1,8 +1,8 @@
 <?php
 
-$title = 'My Account';
+$title = 'My Page';
 $content = __DIR__ . '/views/changeInfo.php';
-$headLineEn = 'My Account / ';
+$headLineEn = 'My Page / ';
 $headLineJa = 'マイアカウント';
 
 include __DIR__ . '/views/layout.php';

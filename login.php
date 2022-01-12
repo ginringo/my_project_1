@@ -5,7 +5,7 @@ require_once __DIR__ . '/lib/dbComponents.php';
 
 // セッションが切れるかログアウトするまでログインページに遷移させない
 if (isset($_SESSION['member_id'])) {
-    header("Location: myAccount.php");
+    header("Location: myPage.php");
 }
 
 if (!empty($_POST) && $_REQUEST['action'] === 'login') {
@@ -15,7 +15,7 @@ if (!empty($_POST) && $_REQUEST['action'] === 'login') {
         // ログインしたユーザーの会員番号をセッションに保存
         $_SESSION['member_id'] = $memberInfo['id'];
         $_SESSION['time'] = time();
-        header("Location: myAccount.php");
+        header("Location: myPage.php");
         exit();
     } else {
         $loginError = 'メールアドレスまたはパスワードが間違っています';

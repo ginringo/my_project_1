@@ -31,8 +31,8 @@ if (!empty($_POST)) {
 
     $_SESSION['member_id'] = $memberInfo['id'];
     $_SESSION['time'] = time();
-    //unset($_SESSION['memberInfo']); NOTE: myAccountに移動
-    header("Location: myAccount.php");
+    //unset($_SESSION['memberInfo']); NOTE: myPageに移動
+    header("Location: myPage.php");
 }
 
 $title = 'Apply Membership';

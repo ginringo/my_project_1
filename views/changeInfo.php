@@ -1,4 +1,4 @@
-<form action="myAccount.php" method="post" class="row">
+<form action="myPage.php" method="post" class="row">
     <div class="col-sm-8 offset-sm-2">
         <p>アカウント情報変更</p>
         <hr>

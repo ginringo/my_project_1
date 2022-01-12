@@ -6,7 +6,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 $link = 'login.php';
 if (isset($_SESSION['member_id'])) {
-    $link = 'myAccount.php';
+    $link = 'myPage.php';
 }
 
 $quantity = 0;
@@ -50,7 +50,7 @@ if (isset($_SESSION['products'])) {
                         <li">Access</li>
                     </a>
                     <a href="<?php echo $link ?>" class="link-line">
-                        <li>Login / MyAccount</li>
+                        <li>Login / MyPage</li>
                     </a>
                 </ul>
                 <div class="d-flex">
@@ -68,7 +68,7 @@ if (isset($_SESSION['products'])) {
 
     <!-- 必須項目の記号を変数で管理 -->
     <?php $req = '&nbsp;<span class="text-danger">*</span>' ?>
-    <?php $pageCheck = preg_match('/^.*myAccount.php$/', $content) ?>
+    <?php $pageCheck = preg_match('/^.*myPage.php$/', $content) ?>
 
     <!-- index.phpでは画像、それ以外はヘッドラインを表示 -->
     <?php if (preg_match('/^.*index.php$/', $content)) : ?>
