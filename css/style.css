@@ -24,12 +24,12 @@ main, .head-line-p, .cartCount {
 	font-family: 'Work Sans', sans-serif;
 }
 
-.container, .container a {
-	color: #555;
+.container {
+	color: #444;
 }
 
-.header, .footer {
-	color: #777;
+.link a, footer {
+	color: #888;
 }
 
 header, footer {
@@ -50,10 +50,7 @@ header {
 
 header ul {
 	list-style-type: none;
-}
-
-header li {
-	margin-right: 50px;
+	width: 500px;
 }
 
 header a img {
@@ -74,12 +71,6 @@ header a img {
 	font-size: 0.95rem;
 }
 
-.header:hover, nav a:hover, .link a:hover {
-	text-decoration: none;
-	color: #000;
-	transition: 1.0s;
-}
-
 footer div img {
 		width: 40px;
 		height: 40px;
@@ -93,6 +84,37 @@ footer p {
 
 .footer-outer {
 	background-color: #f5f5f5;
+}
+
+/* リンク */
+
+.link a:hover {
+	text-decoration: none;
+	color: #000;
+	transition: .5s;
+}
+
+.link-line {
+  position: relative;
+  display: inline-block;
+}
+
+.link-line::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .8s;
+}
+
+.link-line:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
 }
 
 

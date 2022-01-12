@@ -36,21 +36,21 @@ if (isset($_SESSION['products'])) {
     <header class="shadow-sm">
         <div class="container">
             <nav class="d-flex justify-content-between align-items-center flex-wrap">
-                <a href="index.php">
-                    <h4 class="header m-0 p-0 font-weight-normal">Hoge</h4>
-                </a>
-                <ul class="temp m-0 p-0 d-flex flex-row flex-wrap">
-                    <a href=" index.php">
-                        <li class="header">Home</li>
+                <div class="link h4 m-0 p-0">
+                    <a href="index.php">Hoge</a>
+                </div>
+                <ul class="link m-0 p-0 d-flex flex-row flex-wrap justify-content-between">
+                    <a href="index.php" class="link-line">
+                        <li>Home</li>
                     </a>
-                    <a href="items.php">
-                        <li class="header">items</li>
+                    <a href="items.php" class="link-line">
+                        <li>Products</li>
                     </a>
-                    <a href="access.php">
-                        <li class="header">Access</li>
+                    <a href="access.php" class="link-line">
+                        <li">Access</li>
                     </a>
-                    <a href="<?php echo $link ?>">
-                        <li class="header">Login / MyAccount</li>
+                    <a href="<?php echo $link ?>" class="link-line">
+                        <li>Login / MyAccount</li>
                     </a>
                 </ul>
                 <div class="d-flex">
@@ -97,7 +97,7 @@ if (isset($_SESSION['products'])) {
     <div class="footer-outer">
         <div class="container d-flex flex-column align-items-center">
             <footer class="text-center">
-                <p class="footer">Please Follow Us !</p>
+                <p>Please Follow Us !</p>
                 <div class=" mt-3 mb-3 d-flex justify-content-center flex-wrap">
                     <div>
                         <img src="img/facebook.svg" ;>
@@ -108,7 +108,7 @@ if (isset($_SESSION['products'])) {
                         <img src="img/ln.svg" ;>
                     </div>
                 </div>
-                <p class="footer">Copyright © Hoge Co., Ltd. All Rights Reserved.</p>
+                <p>Copyright © Hoge Co., Ltd. All Rights Reserved.</p>
             </footer>
         </div>
     </div>

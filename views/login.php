@@ -1,7 +1,7 @@
 <form action="login.php?action=login" method="post" class="row">
     <div class="col-sm-8 offset-sm-2">
 
-        <div class="link ml-2"><a href="memberInfoInput.php">会員登録がまだの方はこちらから</a></div>
+        <div class="link ml-1"><a href="memberInfoInput.php" class="link-line">会員登録がまだの方はこちらから</a></div>
         <hr>
         <?php if (isset($loginError)) : ?>
             <p class="shadow-sm p-2 bg-white rounded text-danger">

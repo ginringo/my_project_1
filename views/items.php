@@ -1,4 +1,4 @@
-<div class="container link d-flex flex-wrap align-items-center">
+<div class="container d-flex flex-wrap align-items-center">
     <div class="mr-2">
         <button class="shadow-sm btn btn-sm <?= highlight($category_id, 'all') ?>" onclick="location.href='items.php?category_id=all'">ALL</button>
     </div>

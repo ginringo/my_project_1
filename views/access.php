@@ -1,4 +1,4 @@
-<div class="link text-center">URL&nbsp;▷&nbsp;<a href="https://niihama.kawahara.ac.jp/">https://niihama.kawahara.ac.jp/</a></div>
+<div class="link text-center">URL&nbsp;▷&nbsp;<a href="https://niihama.kawahara.ac.jp/" class="link-line">https://niihama.kawahara.ac.jp/</a></div>
 <table class="store-info text-center">
     <tr>
         <td>ADDRESS</td>
