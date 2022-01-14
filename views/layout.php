@@ -10,8 +10,8 @@ if (isset($_SESSION['member_id'])) {
 }
 
 $quantity = 0;
-if (isset($_SESSION['products'])) {
-    $quantity = array_sum(array_column($_SESSION['products'], 'quantity'));
+if (isset($_SESSION['items'])) {
+    $quantity = array_sum(array_column($_SESSION['items'], 'quantity'));
     $quantity = $quantity > 99 ? 99 : $quantity;
 }
 
@@ -43,7 +43,7 @@ if (isset($_SESSION['products'])) {
                     <a href="index.php" class="link-line">
                         <li>Home</li>
                     </a>
-                    <a href="items.php" class="link-line">
+                    <a href="products.php" class="link-line">
                         <li>Products</li>
                     </a>
                     <a href="access.php" class="link-line">

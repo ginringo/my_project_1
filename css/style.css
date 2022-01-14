@@ -151,7 +151,7 @@ footer p {
 
 
 
-/* itemsのCSS */
+/* productsのCSS */
 
 .grid {
 	display: grid;
@@ -159,19 +159,19 @@ footer p {
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.item img {
+.product img {
 	width: 100%;
 }
 
-/* itemDetailsのCSS */
+/* productDetailsのCSS */
 
-.itemImg {
+.productImg {
 	max-width: 100%;
 	height: auto;
 	width /***/:auto;
 }
 
-.itemImgWrap {
+.productImgWrap {
 	margin: 0 auto;
 }
 

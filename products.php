@@ -2,10 +2,10 @@
 
 require_once __DIR__ . '/lib/dbComponents.php';
 
-$title = 'Items';
-$content = __DIR__ . '/views/items.php';
-$headLineEn = 'Items / ';
-$headLineJa = 'アイテム';
+$title = 'Products';
+$content = __DIR__ . '/views/products.php';
+$headLineEn = 'Products / ';
+$headLineJa = '商品一覧';
 
 $order = isset($_GET['order']) ? $_GET['order'] : '';
 $category_id = isset($_GET['category_id']) ? $_GET['category_id'] : 'all';

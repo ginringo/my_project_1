@@ -8,7 +8,7 @@
         </div>
         <hr class="mb-5">
         <div class="text-center">
-            <button class="btn btn-dark btn-lg" onclick="location.href='items.php'">商品一覧に戻る</button>
+            <button class="btn btn-dark btn-lg" onclick="location.href='products.php'">商品一覧に戻る</button>
         </div>
     </div>
 </div>

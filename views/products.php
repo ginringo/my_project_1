@@ -1,10 +1,10 @@
 <div class="container d-flex flex-wrap align-items-center">
     <div class="mr-2">
-        <button class="shadow-sm btn btn-sm <?= highlight($category_id, 'all') ?>" onclick="location.href='items.php?category_id=all'">ALL</button>
+        <button class="shadow-sm btn btn-sm <?= highlight($category_id, 'all') ?>" onclick="location.href='products.php?category_id=all'">ALL</button>
     </div>
     <?php foreach ($categories as $category) : ?>
         <div class="mr-2">
-            <button class="shadow-sm btn btn-sm <?= highlight($category_id, $category['id']) ?>" onclick="location.href='items.php?category_id=<?= $category['id'] ?>'"><?= $category['name'] ?></button>
+            <button class="shadow-sm btn btn-sm <?= highlight($category_id, $category['id']) ?>" onclick="location.href='products.php?category_id=<?= $category['id'] ?>'"><?= $category['name'] ?></button>
         </div>
     <?php endforeach; ?>
 </div>
@@ -30,8 +30,8 @@
 
 <div class="grid mt-5 mb-5">
     <?php foreach ($products as $product) : ?>
-        <div class="item">
-            <a href="itemDetails.php?product_id=<?= $product['id'] ?>">
+        <div class="product">
+            <a href="productDetails.php?product_id=<?= $product['id'] ?>">
                 <img src="<?= $product['path'] ?>">
             </a>
             <div class="mt-2">
@@ -51,13 +51,13 @@
 
 <div class="link text-center">
     <?php if ($page >= 2) : ?>
-        <a href="items.php?category_id=<?= $category_id ?>&order=<?= $order ?>&page=<?= $page - 1; ?>">
+        <a href="products.php?category_id=<?= $category_id ?>&order=<?= $order ?>&page=<?= $page - 1; ?>">
             <?= $page - 1; ?>
         </a>&nbsp;
     <?php endif; ?>
     <span class="border-bottom border-dark text-dark"><?= $page; ?></span>&nbsp;&nbsp;
     <?php if ($page < $maxPage) : ?>
-        <a href="items.php?category_id=<?= $category_id ?>&order=<?= $order ?>&page=<?= $page + 1; ?>">
+        <a href="products.php?category_id=<?= $category_id ?>&order=<?= $order ?>&page=<?= $page + 1; ?>">
             <?= $page + 1; ?>
         </a>
     <?php endif; ?>

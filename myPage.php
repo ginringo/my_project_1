@@ -13,6 +13,6 @@ $memberInfo = selectOneRow($sql, [$_SESSION['member_id']]);
 $title = 'My Page';
 $content = __DIR__ . '/views/myPage.php';
 $headLineEn = 'My Page / ';
-$headLineJa = 'マイアカウント';
+$headLineJa = 'マイページ';
 
 include __DIR__ . '/views/layout.php';
