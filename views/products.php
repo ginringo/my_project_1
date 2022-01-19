@@ -55,7 +55,7 @@
             <?= $page - 1; ?>
         </a>&nbsp;
     <?php endif; ?>
-    <span class="border-bottom border-dark text-dark"><?= $page; ?></span>&nbsp;&nbsp;
+    <span class="border-bottom border-dark"><?= $page; ?></span>&nbsp;&nbsp;
     <?php if ($page < $maxPage) : ?>
         <a href="products.php?category_id=<?= $category_id ?>&order=<?= $order ?>&page=<?= $page + 1; ?>">
             <?= $page + 1; ?>

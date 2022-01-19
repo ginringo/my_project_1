@@ -24,7 +24,7 @@ main, .head-line-p, .cartCount {
 	font-family: 'Work Sans', sans-serif;
 }
 
-.container {
+.container, .heading {
 	color: #444;
 }
 
@@ -124,8 +124,8 @@ footer p {
 	margin-top: 0px;
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  background-image: url(../img/bk2.png);
+  min-height: 85vh;
+  background-image: url(../img/bk.png);
 	background-size: cover;
 	background-position: center;
 }
@@ -161,6 +161,10 @@ footer p {
 
 .product img {
 	width: 100%;
+}
+
+.cnt {
+	font-size: 14px;
 }
 
 /* productDetailsのCSS */

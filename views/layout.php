@@ -72,8 +72,8 @@ if (isset($_SESSION['items'])) {
 
     <!-- index.phpでは画像、それ以外はヘッドラインを表示 -->
     <?php if (preg_match('/^.*index.php$/', $content)) : ?>
-        <div class="top-visual">
-            <h1 class="text-danger">hoge</h1>
+        <div class="top-visual d-flex justify-content-center align-items-center">
+            <h1 class="heading">hoge</h1>
         </div>
     <?php else : ?>
         <div class="head-line-outer">
