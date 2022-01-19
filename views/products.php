@@ -1,17 +1,17 @@
-<div class="container d-flex flex-wrap align-items-center">
-    <div class="mr-2">
-        <button class="shadow-sm btn btn-sm <?= highlight($category_id, 'all') ?>" onclick="location.href='products.php?category_id=all'">ALL</button>
-    </div>
-    <?php foreach ($categories as $category) : ?>
-        <div class="mr-2">
-            <button class="shadow-sm btn btn-sm <?= highlight($category_id, $category['id']) ?>" onclick="location.href='products.php?category_id=<?= $category['id'] ?>'"><?= $category['name'] ?></button>
-        </div>
-    <?php endforeach; ?>
-</div>
 <hr>
-<div class="container d-flex flex-wrap align-items-center justify-content-between">
-    <p class="mt-1 ml-1"><?= $cnt ?>件の商品</p>
-    <form action="#" method="get" class="d-flex flex-wrap mb-0">
+<div class="container d-flex flex-wrap justify-content-between">
+    <div class="d-flex flex-wrap">
+        <div class="mr-2">
+            <button class="shadow-sm btn btn-sm <?= highlight($category_id, 'all') ?>" onclick="location.href='products.php?category_id=all'">ALL</button>
+        </div>
+        <?php foreach ($categories as $category) : ?>
+            <div class="mr-2">
+                <button class="shadow-sm btn btn-sm <?= highlight($category_id, $category['id']) ?>" onclick="location.href='products.php?category_id=<?= $category['id'] ?>'"><?= $category['name'] ?></button>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <form action="#" method="get" class="d-flex flex-wrap align-items-center">
+        <p class="cnt mr-4"><?= $cnt ?> 件の商品</p>
         <div class="shadow-sm form-group mr-2">
             <select id="order" name="order" class="form-control form-control-sm">
                 <option value="created_at desc" <?= selected($order, 'created_at desc') ?>>新着順</option>
@@ -22,7 +22,7 @@
         </div>
         <input type="hidden" name="category_id" value="<?php echo $category_id ?>">
         <div>
-            <button type="submit" class="shadow-sm btn btn-sm btn-outline-secondary">並べ替え</button>
+            <button type="submit" class="shadow-sm btn btn-sm btn-outline-secondary mb-3">並べ替え</button>
         </div>
     </form>
 </div>
