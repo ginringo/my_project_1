@@ -5,9 +5,8 @@
         </div>
         <div class="sentence mt-3 d-flex align-content-between flex-wrap">
             <div class="sentence">
-                <h3 class=""><?= $product['name'] ?></h3>
-                <p class="mt-4"><?= $product['description'] ?></p>
-                <p class="mt-4 text-right h4">&yen;<?= $product['price'] ?></p>
+                <p class="h3"><?= $product['name'] ?>&nbsp;/&nbsp;&yen;<?= $product['price'] ?></p>
+                <p class="h5 font-weight-normal mt-4"><?= $product['description'] ?></p>
             </div>
 
             <?php if ($product['stock'] > 0) : ?>
