@@ -1,5 +1,6 @@
 <hr>
 <div class="container d-flex flex-wrap justify-content-between">
+
     <div class="d-flex flex-wrap">
         <div class="mr-2">
             <button class="shadow-sm btn btn-sm <?= highlight($category_id, 'all') ?>" onclick="location.href='products.php?category_id=all'">ALL</button>
@@ -10,6 +11,7 @@
             </div>
         <?php endforeach; ?>
     </div>
+
     <form action="#" method="get" class="d-flex flex-wrap align-items-center">
         <p class="cnt mr-4"><?= $cnt ?> 件の商品</p>
         <div class="shadow-sm form-group mr-2">
@@ -30,17 +32,18 @@
 
 <div class="grid mt-5 mb-5">
     <?php foreach ($products as $product) : ?>
-        <div class="product">
+        <div class="product link link-line">
             <a href="productDetails.php?product_id=<?= $product['id'] ?>">
                 <img src="<?= $product['path'] ?>">
+                <p class="py-3 mb-0 text-center">
+                    <?= $product['name'] ?>&nbsp;/&nbsp;&yen;
+                    <?= $product['price'] ?>
+                </p>
             </a>
-            <div class="mt-2">
-                <p><?= $product['name'] ?></p>
-                <p>&yen;<?= $product['price'] ?></p>
-            </div>
-            <hr class="mb-0">
+            <hr class="my-0">
         </div>
     <?php endforeach; ?>
+
     <!-- 1ページ4件以下の場合に空のdiv要素で埋める -->
     <?php if ($shortage < 4) : ?>
         <?php for ($i = 0; $i < 4 - $shortage; $i++) : ?>
