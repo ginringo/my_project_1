@@ -7,7 +7,7 @@ if (!isset($_SESSION['member_id'])) {
     header("Location: login.php");
 }
 unset($_SESSION['memberInfo']);
-var_dump($_SESSION);
+// var_dump($_SESSION);
 $sql = 'SELECT name FROM member_info WHERE id = ?';
 $memberInfo = selectOneRow($sql, [$_SESSION['member_id']]);
 $title = 'My Page';

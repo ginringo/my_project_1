@@ -16,7 +16,7 @@ if (!isset($_SESSION['items']) || empty($_SESSION['items'])) {
     $content = __DIR__ . '/views/emptyCart.php';
 }
 
-var_dump($_SESSION);
+//var_dump($_SESSION);
 //unset($_SESSION['items']);
 
 include __DIR__ . '/views/layout.php';

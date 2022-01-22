@@ -13,12 +13,8 @@ $total = $subTotal + $tax;
         <?php foreach ($_SESSION['items'] as $item) : ?>
             <div class="d-flex flex-wrap align-items-center justify-content-between">
                 <img class="cartItemImg" src="<?= '../' . $item['path'] ?>" alt="">
-                <div class="cartItemName mt-2">
-                    <p><?= $item['name'] ?></p>
-                </div>
-                <div class="mt-2">
-                    <p>&yen;<?= $item['price'] ?></p>
-                </div>
+                <p class="mt-2"><?= $item['name'] ?></p>
+                <p class="mt-2">&yen;<?= $item['price'] ?></p>
                 <div class="d-flex flex-wrap mt-2">
                     <form action="cart.php" method="post" class="d-flex flex-wrap">
                         <div class="form-group">
@@ -63,7 +59,7 @@ $total = $subTotal + $tax;
             </table>
         </div>
         <div class="mt-5 text-center">
-            <button class="btn btn-dark btn-lg" onclick="location.href='payment.php'">お支払いへ進む</button>
+            <button class="btn btn-dark btn-block" onclick="location.href='payment.php'">お支払いへ進む</button>
         </div>
     </div>
 </div>

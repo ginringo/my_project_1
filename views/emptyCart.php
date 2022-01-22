@@ -2,7 +2,7 @@
     <div class="col-sm-6 offset-sm-3 mt-4 mb-4">
         <hr class="mb-5">
         <div>
-            <p class="shadow-sm p-2 mb-5 bg-white rounded text-center">
+            <p class="mb-5 text-center">
                 カートにアイテムが入っていません
             </p>
         </div>
