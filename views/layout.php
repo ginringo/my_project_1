@@ -55,7 +55,7 @@ if (isset($_SESSION['items'])) {
                 </ul>
                 <div class="d-flex">
                     <a href="cart.php">
-                        <img src="img/cart.png" alt="cart">
+                        <img src="css/img/cart.png" alt="cart">
                     </a>
                     <?php if ($quantity != 0) : ?>
                         <div class="cartCount rounded-circle bg-danger text-white"><?= $quantity ?></div>
@@ -100,12 +100,12 @@ if (isset($_SESSION['items'])) {
                 <p>Please Follow Us !</p>
                 <div class=" mt-3 mb-3 d-flex justify-content-center flex-wrap">
                     <div>
-                        <img src="img/facebook.svg" ;>
-                        <img src="img/tw.svg" ;>
+                        <img src="css/img/facebook.svg" ;>
+                        <img src="css/img/tw.svg" ;>
                     </div>
                     <div>
-                        <img src="img/ig.svg" ;>
-                        <img src="img/ln.svg" ;>
+                        <img src="css/img/ig.svg" ;>
+                        <img src="css/img/ln.svg" ;>
                     </div>
                 </div>
                 <p>Copyright © Hoge Co., Ltd. All Rights Reserved.</p>

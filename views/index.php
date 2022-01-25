@@ -32,13 +32,13 @@
     <h4 class="mb-4">Pickup</h4>
     <div class="d-flex flex-wrap justify-content-between mb-4">
         <a href="productDetails.php?product_id=1">
-            <img class="pickup-img" src="img/items/item1.png">
+            <img class="pickup-img" src="css/img/items/item1.png">
         </a>
         <a href="productDetails.php?product_id=2">
-            <img class="pickup-img" src="img/items/item2.png">
+            <img class="pickup-img" src="css/img/items/item2.png">
         </a>
         <a href="productDetails.php?product_id=3">
-            <img class="pickup-img" src="img/items/item3.png">
+            <img class="pickup-img" src="css/img/items/item3.png">
         </a>
     </div>
     <div>
