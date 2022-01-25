@@ -1,6 +1,10 @@
 <?php
 
-require_once __DIR__ . '/lib/dbComponents.php';
+/*
+    DAO・ページネーション
+*/
+
+require_once __DIR__ . '/dao/dbComponents.php';
 
 $title = 'Products';
 $content = __DIR__ . '/views/products.php';

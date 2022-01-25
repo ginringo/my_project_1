@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once __DIR__ . '/lib/dbComponents.php';
+require_once __DIR__ . '/dao/dbComponents.php';
 
 $title = 'Product Details';
 $content = __DIR__ . '/views/productDetails.php';
