@@ -59,7 +59,7 @@ $total = $subTotal + $tax;
             </table>
         </div>
         <div class="mt-5 text-center">
-            <button class="btn btn-dark btn-block" onclick="location.href='payment.php'">お支払いへ進む</button>
+            <button class="btn btn-dark btn-block" onclick="location.href='order.php'">注文画面へ進む</button>
         </div>
     </div>
 </div>
