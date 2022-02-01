@@ -7,20 +7,16 @@ $content = __DIR__ . '/views/cart.php';
 $headLineEn = 'Cart / ';
 $headLineJa = 'カート';
 
-//var_dump($_POST);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     processingPost();
+    $_SESSION['amount'] = amountCalc();
 }
 
 if (!isset($_SESSION['items']) || empty($_SESSION['items'])) {
     $content = __DIR__ . '/views/emptyCart.php';
 }
 
-//var_dump($_SESSION);
-//unset($_SESSION['items']);
-
 include __DIR__ . '/views/layout.php';
-
 
 
 function processingPost()
@@ -41,4 +37,20 @@ function processingPost()
         }
     }
     $_SESSION['items'][$_POST['id']] = $_POST;
+}
+
+function amountCalc()
+{
+    $subTotal = 0;
+    foreach ($_SESSION['items'] as $item) {
+        $subTotal += $item['price'] * $item['quantity'];
+    }
+    $tax = floor($subTotal * 0.1);
+    $total = $subTotal + $tax;
+
+    return [
+        'subTotal' => $subTotal,
+        'tax' => $tax,
+        'total' => $total,
+    ];
 }

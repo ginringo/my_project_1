@@ -1,12 +1,3 @@
-<?php
-$subTotal = 0;
-foreach ($_SESSION['items'] as $item) {
-    $subTotal += $item['price'] * $item['quantity'];
-}
-$tax = floor($subTotal * 0.1);
-$total = $subTotal + $tax;
-?>
-
 <div class="row">
     <div class="col-sm-8 offset-sm-2">
         <hr>
@@ -45,19 +36,19 @@ $total = $subTotal + $tax;
                 <tr>
                     <td class="d-flex justify-content-between border-bottom">
                         <div>小計</div>
-                        <div>&yen;<?= $subTotal ?></div>
+                        <div>&yen;<?= $_SESSION['amount']['subTotal'] ?></div>
                     </td>
                 </tr>
                 <tr>
                     <td class="d-flex justify-content-between border-bottom">
                         <div>消費税</div>
-                        <div>&yen;<?= $tax ?></div>
+                        <div>&yen;<?= $_SESSION['amount']['tax'] ?></div>
                     </td>
                 </tr>
                 <tr>
                     <td class="d-flex justify-content-between">
                         <div>合計</div>
-                        <div>&yen;<?= $total ?></div>
+                        <div>&yen;<?= $_SESSION['amount']['total'] ?></div>
                     </td>
                 </tr>
             </table>
