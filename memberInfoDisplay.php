@@ -5,7 +5,7 @@ require_once __DIR__ . '/dao/dbComponents.php';
 
 // 入力画面を介さずにこのページに遷移した場合入力画面に飛ばす
 if (!isset($_SESSION['memberInfo'])) {
-    header("Location: memberInfoInput.php");
+    header("Location: login.php");
     exit();
 }
 
@@ -31,7 +31,10 @@ if (!empty($_POST)) {
 
     $_SESSION['member_id'] = $memberInfo['id'];
     $_SESSION['time'] = time();
-    //unset($_SESSION['memberInfo']); NOTE: myPageに移動
+    /*
+        NOTE: myPageに移動
+        unset($_SESSION['memberInfo']);
+    */
     header("Location: myPage.php");
 }
 
