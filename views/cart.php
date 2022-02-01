@@ -18,7 +18,7 @@ $total = $subTotal + $tax;
                 <div class="d-flex flex-wrap mt-2">
                     <form action="cart.php" method="post" class="d-flex flex-wrap">
                         <div class="form-group">
-                            <input type="number" name="quantity" class="form-control form-control-sm" value="<?= $item['quantity'] ?>" min="1" max="10" style="width: 50px">
+                            <input type="number" name="quantity" class="form-control form-control-sm" value="<?= $item['quantity'] ?>" min="1" max="<?= $item['stock'] ?>" style="width: 50px">
                         </div>
                         <input type="hidden" name="update_id" value="<?= $item['id'] ?>">
                         <div class="ml-3">
