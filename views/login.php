@@ -20,7 +20,7 @@
             <input type="password" class="form-control" id="pass" name="pass" required>
         </div>
 
-        <div class="mt-4">
+        <div class="mt-5">
             <button type="submit" class="btn btn-dark btn-block">ログイン</button>
         </div>
     </div>
