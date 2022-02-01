@@ -31,7 +31,7 @@
 
         <div class="d-flex mt-5 justify-content-center">
             <div class="w-100 mr-5 ml-4">
-                <button type="submit" class="btn btn-lg btn-dark btn-block" onclick="location.href='memberInfoInput.php?action=rewrite'">修正する</button>
+                <button class="btn btn-lg btn-dark btn-block" onclick="location.href='memberInfoInput.php?action=rewrite'">修正する</button>
             </div>
             <form class="w-100 mr-4" action="#" method="post">
                 <input type="hidden" name="action" value="submit">
