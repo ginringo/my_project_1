@@ -27,6 +27,7 @@ CREATE TABLE products
 	PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET = utf8mb4;
 
+
 DROP TABLE IF EXISTS category;
 CREATE TABLE category
 (
@@ -35,6 +36,7 @@ CREATE TABLE category
 	PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET = utf8mb4;
 
+
 DROP TABLE IF EXISTS contact;
 CREATE TABLE contact
 (
@@ -42,4 +44,28 @@ CREATE TABLE contact
 	created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	sentence text,
 	PRIMARY KEY (member_id, created_at)
+) DEFAULT CHARACTER SET = utf8mb4;
+
+
+DROP TABLE IF EXISTS orders;
+CREATE TABLE orders
+(
+	id int NOT NULL AUTO_INCREMENT,
+	payment varchar(32),
+	created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp,
+	member_id int REFERENCES member_info(id),
+	PRIMARY KEY (id)
+) DEFAULT CHARACTER SET = utf8mb4;
+
+
+DROP TABLE IF EXISTS order_details;
+CREATE TABLE order_details
+(
+	order_id int REFERENCES orders(id),
+	product_id int REFERENCES products(id),
+	quantity int,
+	created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp,
+	PRIMARY KEY (order_id, product_id)
 ) DEFAULT CHARACTER SET = utf8mb4;
