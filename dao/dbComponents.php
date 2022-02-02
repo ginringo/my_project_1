@@ -19,7 +19,10 @@ function update($sql, $bindParams)
     $dbh = dbConnect();
     $stmt = $dbh->prepare($sql);
     $stmt->execute($bindParams);
-    return $stmt->rowCount();
+    return [
+        'rowCount' => $stmt->rowCount(),
+        'lastInsertId' => $dbh->lastInsertId(),
+    ];
 }
 
 function selectAllRow($sql, $bindParams)
