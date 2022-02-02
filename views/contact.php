@@ -1,4 +1,4 @@
-<form action="" method="post" class="row">
+<form action="myPage.php?state=contact-comp" method="post" class="row">
     <div class="col-sm-8 offset-sm-2">
         <!-- <div class="form-group">
             <label for="name">お名前<?= $req ?></label>

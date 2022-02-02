@@ -1,13 +1,26 @@
 <div class="row">
     <div class="col-sm-8 offset-sm-2 mt-4 mb-4">
-        <p class="shadow-sm p-2 mb-4 bg-white rounded">
-            <img src="css/img/check.png">&nbsp;お問い合わせが完了しました
-            <!-- <img src="css/img/note.png">&nbsp;ダッシュボード -->
-        </p>
-        <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+        <?php if (!empty($state)) : ?>
+            <p class="pb-1 pl-2 border-bottom border-success">
+                <span class="h5 text-success">○&nbsp;<?= $state ?></span>
+            </p>
+        <?php else : ?>
+            <hr>
+        <?php endif ?>
+
+        <div class="mt-4 d-flex justify-content-between align-items-center flex-wrap">
             <h5 class="ml-2"><?php echo $memberInfo['name'] ?>さん、こんにちは</h5>
             <div class="link">
                 <table style="width: 250px;" class="table table-bordered">
+                    <tr>
+                        <td class="d-flex justify-content-between">
+                            <div class="font-weight-bold">
+                                <a href="myPage.php">ダッシュボード</a>
+                            </div>
+                            <div><img src="css/img/note.png"></div>
+                        </td>
+                    </tr>
                     <tr>
                         <td class="d-flex justify-content-between">
                             <div><a href="contact.php">お問い合わせ</a></div>
@@ -29,6 +42,8 @@
                 </table>
             </div>
         </div>
+
         <hr class="mt-2">
+
     </div>
 </div>
