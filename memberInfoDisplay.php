@@ -3,7 +3,6 @@
 session_start();
 require_once __DIR__ . '/dao/dbComponents.php';
 
-// 入力画面を介さずにこのページに遷移した場合入力画面に飛ばす
 if (!isset($_SESSION['memberInfo'])) {
     header("Location: login.php");
     exit();
@@ -11,7 +10,7 @@ if (!isset($_SESSION['memberInfo'])) {
 
 if (!empty($_POST)) {
 
-    $insert = 'INSERT INTO member_info VALUES(null, ?, ?, ?, ?, ?, null)';
+    $insert = 'INSERT INTO member_info VALUES(null, ?, ?, ?, ?, ?, null, null)';
     update(
         $insert,
         [
@@ -31,10 +30,6 @@ if (!empty($_POST)) {
 
     $_SESSION['member_id'] = $memberInfo['id'];
     $_SESSION['time'] = time();
-    /*
-        NOTE: myPageに移動
-        unset($_SESSION['memberInfo']);
-    */
     header("Location: myPage.php");
 }
 
