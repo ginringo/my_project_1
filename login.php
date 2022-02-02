@@ -6,6 +6,7 @@ require_once __DIR__ . '/dao/dbComponents.php';
 // セッションが切れるかログアウトするまでログインページに遷移させない
 if (isset($_SESSION['member_id'])) {
     header("Location: myPage.php");
+    exit();
 }
 
 if (!empty($_POST) && $_REQUEST['action'] === 'login') {

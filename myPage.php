@@ -5,6 +5,7 @@ require_once __DIR__ . '/dao/dbComponents.php';
 
 if (!isset($_SESSION['member_id'])) {
     header("Location: login.php");
+    exit();
 }
 
 unset($_SESSION['memberInfo']);

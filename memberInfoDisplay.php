@@ -31,6 +31,7 @@ if (!empty($_POST)) {
     $_SESSION['member_id'] = $memberInfo['id'];
     $_SESSION['time'] = time();
     header("Location: myPage.php");
+    exit();
 }
 
 $title = 'Apply Membership';
