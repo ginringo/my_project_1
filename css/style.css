@@ -202,3 +202,14 @@ footer p {
 	font-weight: bold;
 	text-align: center;
 }
+
+
+/* orderのCSS */
+#table {
+	font-size:0.95rem;
+	color:#444;
+}
+
+#table tr {
+	height: 80px;
+}
