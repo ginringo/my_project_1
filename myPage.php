@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once __DIR__ . '/dao/dbComponents.php';
+require_once __DIR__ . '/dao/MyPageDAO.php';
 
 if (!isset($_SESSION['member_id'])) {
     header("Location: login.php");
@@ -10,8 +10,8 @@ if (!isset($_SESSION['member_id'])) {
 
 unset($_SESSION['memberInfo']);
 
-$sql = 'SELECT name FROM member_info WHERE id = ?';
-$memberInfo = selectOneRow($sql, [$_SESSION['member_id']]);
+$dao = new MyPageDAO();
+$memberInfo = $dao->selectMemberInfo();
 
 if (isset($_GET['state'])) {
     if ($_GET['state'] === 'order-comp') {
