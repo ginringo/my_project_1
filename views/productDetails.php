@@ -12,17 +12,15 @@
             <?php if ($product['stock'] === 0) : ?>
                 <p class="text-danger h4 mb-3">※在庫切れ</p>
             <?php else : ?>
-                <?php $max = 10; ?>
                 <div class="sentence d-flex justify-content-between align-items-center flex-wrap">
                     <?php if ($product['stock'] < 10) : ?>
-                        <?php $max = $product['stock']; ?>
                         <p class="text-danger h4 mb-3">※残り<?= $product['stock'] ?>点</p>
                     <?php else : ?>
                         <p class="h4 mb-3">※在庫あり</p>
                     <?php endif; ?>
                     <form action="cart.php" method="post" class="d-flex flex-wrap">
                         <div class="form-group mr-3">
-                            <input type="number" name="quantity" class="form-control" value="1" min="1" max="<?= $max ?>" style="width: 65px;">
+                            <input type="number" name="quantity" class="form-control" value="1" min="1" max="<?= $product['stock'] ?>" style="width: 65px;">
                         </div>
                         <input type="hidden" name="id" value="<?= $product['id'] ?>">
                         <input type="hidden" name="name" value="<?= $product['name'] ?>">

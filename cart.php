@@ -32,7 +32,8 @@ function processingPost()
         }
         if (array_key_exists($_POST['id'], $_SESSION['items'])) {
             $quantity = $_SESSION['items'][$_POST['id']]['quantity'] + $_POST['quantity'];
-            $_SESSION['items'][$_POST['id']]['quantity'] = $quantity <= 10 ? $quantity : 10;
+            $stock = $_SESSION['items'][$_POST['id']]['stock'];
+            $_SESSION['items'][$_POST['id']]['quantity'] = $stock < $quantity ? $stock : $quantity;
             return;
         }
     }
