@@ -17,23 +17,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // 注文を確定ボタンを押した際の処理
 
-    $insert1 = 'INSERT INTO orders VALUES(null, ?, null, null, ?)';
+    $sql_1 = 'INSERT INTO orders VALUES(null, ?, null, null, ?)';
     $lastInsertId = update(
-        $insert1,
+        $sql_1,
         [
             $_POST['payment'],
             $_SESSION['member_id'],
         ]
     )['lastInsertId'];
 
-    $insert2 = 'INSERT INTO order_details VALUES(?, ?, ?, null, null)';
+    $sql_2 = 'INSERT INTO order_details VALUES(?, ?, ?, null, null)';
+    $sql_3 = 'UPDATE products SET stock = stock - ? WHERE id = ?';
     foreach ($_SESSION['items'] as $item) {
         update(
-            $insert2,
+            $sql_2,
             [
                 $lastInsertId,
                 $item['id'],
                 $item['quantity'],
+            ]
+        );
+        update(
+            $sql_3,
+            [
+                $item['quantity'],
+                $item['id'],
             ]
         );
     }
