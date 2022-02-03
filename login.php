@@ -1,19 +1,17 @@
 <?php
 
 session_start();
-require_once __DIR__ . '/dao/dbComponents.php';
+require_once __DIR__ . '/dao/LoginDAO.php';
 
-// セッションが切れるかログアウトするまでログインページに遷移させない
 if (isset($_SESSION['member_id'])) {
     header("Location: myPage.php");
     exit();
 }
 
 if (!empty($_POST) && $_REQUEST['action'] === 'login') {
-    $sql = 'SELECT * FROM member_info WHERE email=? AND pass=?';
-    $memberInfo = selectOneRow($sql, [$_POST['email'], sha1($_POST['pass'])]);
+    $dao = new LoginDAO();
+    $memberInfo = $dao->selectMemberInfo();
     if ($memberInfo) {
-        // ログインしたユーザーの会員番号をセッションに保存
         $_SESSION['member_id'] = $memberInfo['id'];
         $_SESSION['time'] = time();
         header("Location: myPage.php");
