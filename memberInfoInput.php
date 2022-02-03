@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once __DIR__ . '/dao/dbComponents.php';
+require_once __DIR__ . '/dao/MemberInfoInputDAO.php';
 
 if (!isset($_REQUEST['action'])) {
     $_REQUEST['action'] = '';
@@ -24,8 +24,8 @@ function validate($cnt)
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $sql = 'SELECT COUNT(*) AS "cnt" FROM member_info WHERE email=?';
-    $memberInfo = selectOneRow($sql, [$_POST['email']]);
+    $dao = new MemberInfoInputDAO();
+    $memberInfo = $dao->selectMemberInfo();
     $errors = validate($memberInfo['cnt']);
 
     if (count($errors) === 0) {

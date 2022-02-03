@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once __DIR__ . '/dao/dbComponents.php';
+require_once __DIR__ . '/dao/MemberInfoDisplayDAO.php';
 
 if (!isset($_SESSION['memberInfo'])) {
     header("Location: login.php");
@@ -10,25 +10,10 @@ if (!isset($_SESSION['memberInfo'])) {
 
 if (!empty($_POST)) {
 
-    $insert = 'INSERT INTO member_info VALUES(null, ?, ?, ?, ?, ?, null, null)';
-    update(
-        $insert,
-        [
-            $_SESSION['memberInfo']['name'],
-            $_SESSION['memberInfo']['address'],
-            $_SESSION['memberInfo']['email'],
-            $_SESSION['memberInfo']['tel'],
-            sha1($_SESSION['memberInfo']['pass1'])
-        ]
-    );
+    $dao = new MemberInfoDisplayDAO();
+    $lastInsertId = $dao->insertMemberInfo()['lastInsertId'];
 
-    $select = 'SELECT id FROM member_info WHERE email=? AND pass=?';
-    $memberInfo = selectOneRow(
-        $select,
-        [$_SESSION['memberInfo']['email'], sha1($_SESSION['memberInfo']['pass1'])]
-    );
-
-    $_SESSION['member_id'] = $memberInfo['id'];
+    $_SESSION['member_id'] = $lastInsertId;
     $_SESSION['time'] = time();
     header("Location: myPage.php");
     exit();
