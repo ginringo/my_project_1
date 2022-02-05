@@ -39,6 +39,12 @@
                             <div><img src="css/img/cross.png"></div>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="d-flex justify-content-between">
+                            <div><a href="withdrawal.php">退会する</a></div>
+                            <!-- <div><img src="css/img/cross.png"></div> -->
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>
