@@ -8,18 +8,26 @@ if (isset($_SESSION['member_id'])) {
     exit();
 }
 
-if (!empty($_POST) && $_REQUEST['action'] === 'login') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dao = new LoginDAO();
     $memberInfo = $dao->selectMemberInfo();
+
     if ($memberInfo) {
         $_SESSION['member_id'] = $memberInfo['id'];
         $_SESSION['time'] = time();
         header("Location: myPage.php");
         exit();
     } else {
-        $loginError = 'メールアドレスまたはパスワードが間違っています';
+        $message = '×メールアドレスまたはパスワードが間違っています';
+        $color = "text-danger";
+        $border = "border-danger";
     }
 } else {
+    if (isset($_GET['withdrawal'])) {
+        $message = '○退会処理が完了しました' . PHP_EOL;
+        $color = "text-success";
+        $border = "border-success";
+    }
     $_POST = [
         'email' => '',
     ];
