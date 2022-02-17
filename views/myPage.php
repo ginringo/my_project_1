@@ -2,8 +2,8 @@
     <div class="col-sm-8 offset-sm-2 mt-4 mb-4">
 
         <?php if (!empty($state)) : ?>
-            <p class="pb-1 pl-2 border-bottom border-success">
-                <span class="h5 text-success">○&nbsp;<?= $state ?></span>
+            <p class="pb-1 pl-2 border-bottom <?= $borderColor ?>">
+                <span class="h5 <?= $textColor ?>"><?= $state ?></span>
             </p>
         <?php else : ?>
             <hr>
@@ -36,13 +36,13 @@
                     <tr>
                         <td class="d-flex justify-content-between">
                             <div><a href="logout.php">ログアウト</a></div>
-                            <div><img src="css/img/cross.png"></div>
+                            <div><img src="css/img/logout.png"></div>
                         </td>
                     </tr>
                     <tr>
                         <td class="d-flex justify-content-between">
                             <div><a href="withdrawal.php">退会する</a></div>
-                            <!-- <div><img src="css/img/cross.png"></div> -->
+                            <div><img src="css/img/cross.png"></div>
                         </td>
                     </tr>
                 </table>
