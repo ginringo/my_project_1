@@ -5,7 +5,7 @@
         <?php foreach ($_SESSION['items'] as $item) : ?>
             <div class="d-flex flex-wrap align-items-center justify-content-between">
                 <a href="productDetails.php?product_id=<?= $item['id'] ?>">
-                    <img class="cartItemImg" src="<?= '../' . $item['path'] ?>" alt="">
+                    <img class="cart-item-img" src="<?= '../' . $item['path'] ?>" alt="">
                 </a>
                 <p class="mt-2"><?= $item['name'] ?></p>
                 <p class="mt-2">&yen;<?= $item['price'] ?></p>

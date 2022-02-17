@@ -27,9 +27,9 @@ if (isset($_SESSION['items'])) {
         <h1 class="heading">hoge</h1>
     </div>
 <?php else : ?>
-    <div class="head-line-outer">
-        <div class="head-line-inner container d-flex align-items-center">
-            <p class="head-line-p">
+    <div class="headline-outer">
+        <div class="headline-inner container d-flex align-items-center">
+            <p class="headline-p">
                 <?php echo $headLineEn; ?>
                 <?php echo $headLineJa; ?>
             </p>

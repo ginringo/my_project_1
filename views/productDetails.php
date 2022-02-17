@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-10 offset-sm-1 d-flex flex-wrap">
-        <div class="productImgWrap">
-            <img class="productImg" src="<?= '../' . $product['path'] ?>" alt="">
+        <div class="product-img-wrapper">
+            <img class="product-img" src="<?= '../' . $product['path'] ?>" alt="">
         </div>
         <div class="sentence mt-3 d-flex align-content-between flex-wrap">
             <div class="sentence">

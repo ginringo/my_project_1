@@ -39,7 +39,7 @@
                         <img src="css/img/cart.png" alt="cart">
                     </a>
                     <?php if ($quantity != 0) : ?>
-                        <div class="cartCount rounded-circle bg-danger text-white"><?= $quantity ?></div>
+                        <div class="cart-count rounded-circle bg-danger text-white"><?= $quantity ?></div>
                     <?php endif ?>
                 </div>
             </nav>

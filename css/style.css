@@ -20,7 +20,7 @@ main {
 	font-size: 0.95rem;
 }
 
-main, .head-line-p, .cartCount {
+main, .headline-p, .cart-count {
 	font-family: 'Work Sans', sans-serif;
 }
 
@@ -58,15 +58,15 @@ header a img {
 	height: 25px;
 }
 
-.head-line-outer {
+.headline-outer {
 	background-color: #eaeaea;
 }
 
-.head-line-inner {
+.headline-inner {
 	height: 80px;
 }
 
-.head-line-p {
+.headline-p {
 	margin: 0;
 	font-size: 0.95rem;
 }
@@ -169,13 +169,13 @@ footer p {
 
 /* productDetailsのCSS */
 
-.productImg {
+.product-img {
 	max-width: 100%;
 	height: auto;
 	width /***/:auto;
 }
 
-.productImgWrap {
+.product-img-wrapper {
 	margin: 0 auto;
 }
 
@@ -188,12 +188,12 @@ footer p {
 
 
 /* cartのCSS */
-.cartItemImg {
+.cart-item-img {
 	height: 7rem;
 	width: 7rem;
 }
 
-.cartCount {
+.cart-count {
 	width: 22px;
 	height: 22px;
 	font-size: 0.67rem;
