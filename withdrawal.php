@@ -8,17 +8,19 @@ if (!isset($_SESSION['member_id'])) {
     exit();
 }
 
+/*
+    TODO: 会員情報のほかに注文履歴や問い合わせ履歴も削除する必要があるかかも
+*/
 $dao = new WithdrawalDAO();
 $rowCount = $dao->deleteMemberInfo();
 
-unset($_SESSION['member_id']);
-unset($_SESSION['time']);
-
-var_dump($rowCount);
-
 if ($rowCount) {
-    header('Location: login.php?action=withdrawal');
+    unset($_SESSION['member_id']);
+    unset($_SESSION['time']);
+    header('Location: login.php?withdrawal');
     exit();
-} else {
-    echo '退会処理に失敗しました' . PHP_EOL;
 }
+
+echo '退会処理に失敗しました' . PHP_EOL;
+header('Location: myPage.php?state=withdrawal-failure');
+exit();
