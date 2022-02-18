@@ -5,17 +5,17 @@
         <tr>
             <td class="align-middle">お名前</td>
             <td></td>
-            <td class="align-middle"><?= $memberInfo['name'] ?>&nbsp;様</td>
+            <td class="align-middle"><?= $member_info['name'] ?>&nbsp;様</td>
         </tr>
         <tr>
             <td class="align-middle">ご連絡先</td>
             <td></td>
-            <td class="align-middle"><?= $memberInfo['email'] ?></td>
+            <td class="align-middle"><?= $member_info['email'] ?></td>
         </tr>
         <tr>
             <td class="align-middle">お届け先住所</td>
             <td></td>
-            <td class="align-middle"><?= $memberInfo['address'] ?></td>
+            <td class="align-middle"><?= $member_info['address'] ?></td>
         </tr>
         <tr>
             <td class="align-middle">ご請求金額</td>

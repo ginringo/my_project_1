@@ -16,13 +16,13 @@ class OrderDAO extends DAO
         );
     }
 
-    public function insertOrderDetails($lastInsertId, $item)
+    public function insertOrderDetails($last_insert_id, $item)
     {
         $sql = 'INSERT INTO order_details VALUES(?, ?, ?, null, null)';
         return $this->update(
             $sql,
             [
-                $lastInsertId,
+                $last_insert_id,
                 $item['id'],
                 $item['quantity'],
             ]

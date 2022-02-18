@@ -17,10 +17,10 @@ $dao = new OrderDAO();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // 注文を確定ボタンを押した際の処理
-    $lastInsertId = $dao->insertOrders()['lastInsertId'];
+    $last_insert_id = $dao->insertOrders()['last_insert_id'];
 
     foreach ($_SESSION['items'] as $item) {
-        $dao->insertOrderDetails($lastInsertId, $item);
+        $dao->insertOrderDetails($last_insert_id, $item);
         $dao->updateProduct($item);
     }
     unset($_SESSION['items']);
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
 } else {
     // カートから注文画面へ進むを押した際の処理
-    $memberInfo = $dao->selectMemberInfo();
+    $member_info = $dao->selectMemberInfo();
 }
 
 $title = 'Order';
