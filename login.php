@@ -10,10 +10,10 @@ if (isset($_SESSION['member_id'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dao = new LoginDAO();
-    $memberInfo = $dao->selectMemberInfo();
+    $member_info = $dao->selectMemberInfo();
 
-    if ($memberInfo) {
-        $_SESSION['member_id'] = $memberInfo['id'];
+    if ($member_info) {
+        $_SESSION['member_id'] = $member_info['id'];
         $_SESSION['time'] = time();
         header("Location: myPage.php");
         exit();
