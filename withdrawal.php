@@ -12,9 +12,9 @@ if (!isset($_SESSION['member_id'])) {
     TODO: 会員情報のほかに注文履歴や問い合わせ履歴も削除する必要があるかかも
 */
 $dao = new WithdrawalDAO();
-$rowCount = $dao->deleteMemberInfo();
+$row_count = $dao->deleteMemberInfo();
 
-if ($rowCount) {
+if ($row_count) {
     unset($_SESSION['member_id']);
     unset($_SESSION['time']);
     header('Location: login.php?withdrawal');
