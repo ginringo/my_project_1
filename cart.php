@@ -42,15 +42,15 @@ function processingPost()
 
 function amountCalc()
 {
-    $subTotal = 0;
+    $sub_total = 0;
     foreach ($_SESSION['items'] as $item) {
-        $subTotal += $item['price'] * $item['quantity'];
+        $sub_total += $item['price'] * $item['quantity'];
     }
-    $tax = floor($subTotal * 0.1);
-    $total = $subTotal + $tax;
+    $tax = floor($sub_total * 0.1);
+    $total = $sub_total + $tax;
 
     return [
-        'subTotal' => $subTotal,
+        'sub_total' => $sub_total,
         'tax' => $tax,
         'total' => $total,
     ];

@@ -36,7 +36,7 @@
                 <tr>
                     <td class="d-flex justify-content-between border-bottom">
                         <div>小計</div>
-                        <div>&yen;<?= $_SESSION['amount']['subTotal'] ?></div>
+                        <div>&yen;<?= $_SESSION['amount']['sub_total'] ?></div>
                     </td>
                 </tr>
                 <tr>
