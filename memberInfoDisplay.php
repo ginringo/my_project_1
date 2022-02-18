@@ -3,7 +3,7 @@
 session_start();
 require_once __DIR__ . '/dao/MemberInfoDisplayDAO.php';
 
-if (!isset($_SESSION['memberInfo'])) {
+if (!isset($_SESSION['member_info'])) {
     header("Location: login.php");
     exit();
 }
@@ -11,9 +11,9 @@ if (!isset($_SESSION['memberInfo'])) {
 if (!empty($_POST)) {
 
     $dao = new MemberInfoDisplayDAO();
-    $lastInsertId = $dao->insertMemberInfo()['lastInsertId'];
+    $last_insert_id = $dao->insertMemberInfo()['last_insert_id'];
 
-    $_SESSION['member_id'] = $lastInsertId;
+    $_SESSION['member_id'] = $last_insert_id;
     $_SESSION['time'] = time();
     header("Location: myPage.php");
     exit();

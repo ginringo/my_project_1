@@ -25,18 +25,18 @@ function validate($cnt)
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dao = new MemberInfoInputDAO();
-    $memberInfo = $dao->selectMemberInfo();
-    $errors = validate($memberInfo['cnt']);
+    $member_info = $dao->selectMemberInfo();
+    $errors = validate($member_info['cnt']);
 
     if (count($errors) === 0) {
-        $_SESSION['memberInfo'] = $_POST;
+        $_SESSION['member_info'] = $_POST;
         header("Location: memberInfoDisplay.php");
         exit();
     }
 } else {
     $errors = [];
-    if ($_REQUEST['action'] === 'rewrite' && isset($_SESSION['memberInfo'])) {
-        $_POST = $_SESSION['memberInfo'];
+    if ($_REQUEST['action'] === 'rewrite' && isset($_SESSION['member_info'])) {
+        $_POST = $_SESSION['member_info'];
     } else {
         $_POST = [
             'name' => '',

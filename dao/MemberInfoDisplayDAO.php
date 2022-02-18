@@ -10,11 +10,11 @@ class MemberInfoDisplayDAO extends DAO
         return $this->update(
             $sql,
             [
-                $_SESSION['memberInfo']['name'],
-                $_SESSION['memberInfo']['address'],
-                $_SESSION['memberInfo']['email'],
-                $_SESSION['memberInfo']['tel'],
-                sha1($_SESSION['memberInfo']['pass1'])
+                $_SESSION['member_info']['name'],
+                $_SESSION['member_info']['address'],
+                $_SESSION['member_info']['email'],
+                $_SESSION['member_info']['tel'],
+                sha1($_SESSION['member_info']['pass1'])
             ]
         );
     }

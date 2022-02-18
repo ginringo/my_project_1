@@ -5,27 +5,27 @@
             <tr>
                 <td class="align-middle">お名前</td>
                 <td></td>
-                <td class="align-middle"><?= $_SESSION['memberInfo']['name'] ?></td>
+                <td class="align-middle"><?= $_SESSION['member_info']['name'] ?></td>
             </tr>
             <tr>
                 <td class="align-middle">住所</td>
                 <td></td>
-                <td class="align-middle"><?= $_SESSION['memberInfo']['address'] ?></td>
+                <td class="align-middle"><?= $_SESSION['member_info']['address'] ?></td>
             </tr>
             <tr>
                 <td class="align-middle">メールアドレス</td>
                 <td></td>
-                <td class="align-middle"><?= $_SESSION['memberInfo']['email'] ?></td>
+                <td class="align-middle"><?= $_SESSION['member_info']['email'] ?></td>
             </tr>
             <tr>
                 <td class="align-middle">電話番号</td>
                 <td></td>
-                <td class="align-middle"><?= $_SESSION['memberInfo']['tel'] ?></td>
+                <td class="align-middle"><?= $_SESSION['member_info']['tel'] ?></td>
             </tr>
             <tr class="border-bottom">
                 <td class="align-middle">パスワード</td>
                 <td></td>
-                <td class="align-middle"><?= preg_replace('/./', '●', $_SESSION['memberInfo']['pass1']) ?></td>
+                <td class="align-middle"><?= preg_replace('/./', '●', $_SESSION['member_info']['pass1']) ?></td>
             </tr>
         </table>
 
