@@ -4,8 +4,8 @@ require_once __DIR__ . '/dao/ProductsDAO.php';
 
 $title = 'Products';
 $content = __DIR__ . '/views/products.php';
-$headLineEn = 'Products / ';
-$headLineJa = '商品一覧';
+$headline_eng = 'Products / ';
+$headline_jp = '商品一覧';
 
 $order = isset($_GET['order']) ? $_GET['order'] : '';
 $category_id = isset($_GET['category_id']) ? $_GET['category_id'] : 'all';

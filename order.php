@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $title = 'Order';
 $content = __DIR__ . '/views/order.php';
-$headLineEn = 'Order / ';
-$headLineJa = '注文';
+$headline_eng = 'Order / ';
+$headline_jp = '注文';
 
 include __DIR__ . '/views/layout.php';

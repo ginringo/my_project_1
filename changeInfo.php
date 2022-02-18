@@ -2,7 +2,7 @@
 
 $title = 'My Page';
 $content = __DIR__ . '/views/changeInfo.php';
-$headLineEn = 'My Page / ';
-$headLineJa = 'マイアカウント';
+$headline_eng = 'My Page / ';
+$headline_jp = 'マイアカウント';
 
 include __DIR__ . '/views/layout.php';

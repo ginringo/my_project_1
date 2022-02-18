@@ -4,8 +4,8 @@ session_start();
 
 $title = 'Cart';
 $content = __DIR__ . '/views/cart.php';
-$headLineEn = 'Cart / ';
-$headLineJa = 'カート';
+$headline_eng = 'Cart / ';
+$headline_jp = 'カート';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     processingPost();

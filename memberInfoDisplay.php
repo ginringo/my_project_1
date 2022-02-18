@@ -21,7 +21,7 @@ if (!empty($_POST)) {
 
 $title = 'Apply Membership';
 $content = __DIR__ . '/views/memberInfoDisplay.php';
-$headLineEn = 'Apply Membership / ';
-$headLineJa = '会員登録（確認画面）';
+$headline_eng = 'Apply Membership / ';
+$headline_jp = '会員登録（確認画面）';
 
 include __DIR__ . '/views/layout.php';

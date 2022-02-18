@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $title = 'Apply Membership';
 $content = __DIR__ . '/views/memberInfoInput.php';
-$headLineEn = 'Apply Membership / ';
-$headLineJa = '会員登録';
+$headline_eng = 'Apply Membership / ';
+$headline_jp = '会員登録';
 
 include __DIR__ . '/views/layout.php';

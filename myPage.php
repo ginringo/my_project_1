@@ -34,7 +34,7 @@ if (isset($_GET['state'])) {
 
 $title = 'My Page';
 $content = __DIR__ . '/views/myPage.php';
-$headLineEn = 'My Page / ';
-$headLineJa = 'マイページ';
+$headline_eng = 'My Page / ';
+$headline_jp = 'マイページ';
 
 include __DIR__ . '/views/layout.php';

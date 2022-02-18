@@ -2,7 +2,7 @@
 
 $title = 'Access';
 $content = __DIR__ . '/views/access.php';
-$headLineEn = 'Access / ';
-$headLineJa = 'アクセス';
+$headline_eng = 'Access / ';
+$headline_jp = 'アクセス';
 
 include __DIR__ . '/views/layout.php';

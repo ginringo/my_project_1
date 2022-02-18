@@ -30,8 +30,8 @@ if (isset($_SESSION['items'])) {
     <div class="headline-outer">
         <div class="headline-inner container d-flex align-items-center">
             <p class="headline-p">
-                <?php echo $headLineEn; ?>
-                <?php echo $headLineJa; ?>
+                <?php echo $headline_eng; ?>
+                <?php echo $headline_jp; ?>
             </p>
         </div>
     </div>

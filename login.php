@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $title = 'Login';
 $content = __DIR__ . '/views/login.php';
-$headLineEn = 'Login / ';
-$headLineJa = 'ログイン';
+$headline_eng = 'Login / ';
+$headline_jp = 'ログイン';
 
 include __DIR__ . '/views/layout.php';

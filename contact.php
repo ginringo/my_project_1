@@ -2,7 +2,7 @@
 
 $title = 'Contact Us';
 $content = __DIR__ . '/views/contact.php';
-$headLineEn = 'Contact Us / ';
-$headLineJa = 'お問い合わせ';
+$headline_eng = 'Contact Us / ';
+$headline_jp = 'お問い合わせ';
 
 include __DIR__ . '/views/layout.php';
