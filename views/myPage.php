@@ -2,15 +2,15 @@
     <div class="col-sm-8 offset-sm-2 mt-4 mb-4">
 
         <?php if (!empty($state)) : ?>
-            <p class="pb-1 pl-2 border-bottom <?= $borderColor ?>">
-                <span class="h5 <?= $textColor ?>"><?= $state ?></span>
+            <p class="pb-1 pl-2 border-bottom <?= $border_color ?>">
+                <span class="h5 <?= $text_color ?>"><?= $state ?></span>
             </p>
         <?php else : ?>
             <hr>
         <?php endif ?>
 
         <div class="mt-4 d-flex justify-content-between align-items-center flex-wrap">
-            <h5 class="ml-2"><?php echo $memberInfo['name'] ?>さん、こんにちは</h5>
+            <h5 class="ml-2"><?php echo $member_info['name'] ?>さん、こんにちは</h5>
             <div class="link">
                 <table style="width: 250px;" class="table table-bordered">
                     <tr>

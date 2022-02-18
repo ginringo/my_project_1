@@ -8,15 +8,15 @@ if (!isset($_SESSION['member_id'])) {
     exit();
 }
 
-unset($_SESSION['memberInfo']);
+unset($_SESSION['member_info']);
 
 $dao = new MyPageDAO();
-$memberInfo = $dao->selectMemberInfo();
+$member_info = $dao->selectMemberInfo();
 
 if (isset($_GET['state'])) {
 
-    $borderColor = 'border-success';
-    $textColor = 'text-success';
+    $border_color = 'border-success';
+    $text_color = 'text-success';
 
     switch ($_GET['state']) {
         case 'order-comp':
@@ -27,8 +27,8 @@ if (isset($_GET['state'])) {
             break;
         case 'withdrawal-failure':
             $state = '×退会処理に失敗しました';
-            $borderColor = 'border-danger';
-            $textColor = 'text-danger';
+            $border_color = 'border-danger';
+            $text_color = 'text-danger';
     }
 }
 
