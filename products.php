@@ -9,17 +9,19 @@ $headline_jp = '商品一覧';
 
 $order = isset($_GET['order']) ? $_GET['order'] : '';
 $category_id = isset($_GET['category_id']) ? $_GET['category_id'] : 'all';
+
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 $start = 8 * ($page - 1);
 
 $dao = new ProductsDAO();
 $categories = $dao->selectCategories();
 $products = $dao->selectProducts($category_id, $start, $order);
-$countRow = $dao->selectProductsCount($category_id);
+$count_row = $dao->selectProductsCount($category_id);
 
-$cnt = $countRow['cnt'];
-$maxPage = ceil($cnt / 8);
-$shortage = 8 - (8 * $maxPage - $cnt);
+$cnt = $count_row['cnt'];
+$max_page = ceil($cnt / 8);
+$shortage = 8 - (8 * $max_page - $cnt);
+
 
 include __DIR__ . '/views/layout.php';
 
