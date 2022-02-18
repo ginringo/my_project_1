@@ -15,30 +15,30 @@ class DAO
         }
     }
 
-    public function update($sql, $bindParams)
+    public function update($sql, $bind_params)
     {
         $dbh = $this->dbConnect();
         $stmt = $dbh->prepare($sql);
-        $stmt->execute($bindParams);
+        $stmt->execute($bind_params);
         return [
-            'rowCount' => $stmt->rowCount(),
-            'lastInsertId' => $dbh->lastInsertId(),
+            'row_count' => $stmt->rowCount(),
+            'last_insert_id' => $dbh->lastInsertId(),
         ];
     }
 
-    public function selectAllRow($sql, $bindParams)
+    public function selectAllRow($sql, $bind_params)
     {
         $dbh = $this->dbConnect();
         $stmt = $dbh->prepare($sql);
-        $stmt->execute($bindParams);
+        $stmt->execute($bind_params);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function selectOneRow($sql, $bindParams)
+    public function selectOneRow($sql, $bind_params)
     {
         $dbh = $this->dbConnect();
         $stmt = $dbh->prepare($sql);
-        $stmt->execute($bindParams);
+        $stmt->execute($bind_params);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
