@@ -21,23 +21,23 @@ class ProductsDAO extends DAO
         }
         $sql .= ' LIMIT ?, 8';
 
-        $bindParams = [$start];
+        $bind_params = [$start];
         if ($category_id !== 'all') {
             $sql = preg_replace('/ORDER/', 'WHERE category_id = ? ORDER', $sql);
-            $bindParams = [$category_id, $start];
+            $bind_params = [$category_id, $start];
         }
-        return $this->selectAllRow($sql, $bindParams);
+        return $this->selectAllRow($sql, $bind_params);
     }
 
     public function selectProductsCount($category_id)
     {
         $sql = 'SELECT COUNT(*) AS cnt FROM products';
 
-        $bindParams_2 = [];
+        $bind_params = [];
         if ($category_id !== 'all') {
             $sql .= ' WHERE category_id = ?';
-            $bindParams_2 = [$category_id];
+            $bind_params = [$category_id];
         }
-        return $this->selectOneRow($sql, $bindParams_2);
+        return $this->selectOneRow($sql, $bind_params);
     }
 }
