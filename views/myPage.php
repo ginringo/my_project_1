@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <td class="d-flex justify-content-between">
-                            <div><a href="withdrawal.php">退会する</a></div>
+                            <div><a href="withdrawal.php" onclick="return confirm('この処理は元に戻せません。本当によろしいですか？')">退会する</a></div>
                             <div><img src="css/img/cross.png"></div>
                         </td>
                     </tr>
