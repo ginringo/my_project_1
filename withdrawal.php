@@ -9,7 +9,7 @@ if (!isset($_SESSION['member_id'])) {
 }
 
 /*
-    TODO: 会員情報のほかに注文履歴や問い合わせ履歴も削除する必要があるかかも
+    TODO: 会員情報を削除するのではなく、退会フラグを作る
 */
 $dao = new WithdrawalDAO();
 $row_count = $dao->deleteMemberInfo();

@@ -6,7 +6,7 @@ class MemberInfoDisplayDAO extends DAO
 {
     public function insertMemberInfo()
     {
-        $sql = 'INSERT INTO member_info VALUES(null, ?, ?, ?, ?, ?, null, null)';
+        $sql = 'INSERT INTO member_info VALUES(NULL, ?, ?, ?, ?, ?, NULL, NULL, FALSE)';
         return $this->update(
             $sql,
             [

@@ -9,6 +9,7 @@ CREATE TABLE member_info (
   pass varchar(255),
   created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	updated_at timestamp,
+	is_deleted boolean,
   PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET = utf8mb4;
 
