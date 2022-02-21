@@ -8,9 +8,6 @@ if (!isset($_SESSION['member_id'])) {
     exit();
 }
 
-/*
-    TODO: 会員情報を削除するのではなく、退会フラグを作る
-*/
 $dao = new WithdrawalDAO();
 $row_count = $dao->deleteMemberInfo();
 
@@ -21,6 +18,5 @@ if ($row_count) {
     exit();
 }
 
-echo '退会処理に失敗しました' . PHP_EOL;
-header('Location: myPage.php?state=withdrawal-failure');
+header('Location: myPage.php?state=failure');
 exit();

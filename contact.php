@@ -13,7 +13,12 @@ if (!empty($_POST)) {
     $dao = new ContactDAO();
     $row_count = $dao->insertContact()['row_count'];
 
-    header('Location: myPage.php?state=contact-comp');
+    if ($row_count) {
+        header('Location: myPage.php?state=contact-comp');
+        exit();
+    }
+
+    header('Location: myPage.php?state=failure');
     exit();
 }
 

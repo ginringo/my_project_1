@@ -25,8 +25,8 @@ if (isset($_GET['state'])) {
         case 'contact-comp':
             $state = '○お問い合わせが完了しました';
             break;
-        case 'withdrawal-failure':
-            $state = '×退会処理に失敗しました';
+        case 'failure':
+            $state = '×処理に失敗しました';
             $border_color = 'border-danger';
             $text_color = 'text-danger';
     }
