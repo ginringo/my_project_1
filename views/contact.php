@@ -1,26 +1,13 @@
-<form action="myPage.php?state=contact-comp" method="post" class="row">
+<form action="#" method="post" class="row">
     <div class="col-sm-8 offset-sm-2">
-        <!-- <div class="form-group">
-            <label for="name">お名前<?= $req ?></label>
-            <input type="text" class="form-control" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">メールアドレス<?= $req ?></label>
-            <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="tel">電話番号</label>
-            <input type="tel" class="form-control" id="tel" name="tel">
-        </div> -->
-        <!-- テキストエリア -->
 
         <div class="form-group">
-            <label for="message">お問い合わせ内容<?= $req ?></label>
-            <textarea name="message" id="message" rows="7" class="form-control" required></textarea>
+            <label for="sentence">お問い合わせ内容<?= $req ?></label>
+            <textarea name="sentence" id="sentence" rows="7" class="form-control" required></textarea>
         </div>
         <!-- 送信ボタン -->
         <div class="mt-4">
-            <button type="submit" class="btn btn-dark">送信する</button>
+            <button type="submit" class="btn btn-dark btn-block">送信する</button>
         </div>
     </div>
 </form>
