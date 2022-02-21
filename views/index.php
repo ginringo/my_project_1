@@ -1,29 +1,10 @@
-<style>
-    .index-section-1 {
-        margin-top: 100px;
-    }
-
-    .delimiter {
-        margin: 60px 0;
-    }
-
-    .index-section-2 {
-        margin-bottom: 100px;
-    }
-
-    .pickup-img {
-        height: 13.7rem;
-        width: 13.7rem;
-    }
-</style>
-
 <section class="index-section-1 text-center">
     <h4 class="mb-4">Hoge</h4>
     <p>
-        TextTextTextTextTextTextTextTextTextTextTextTextTextText<br>
-        TextTextTextTextTextTextTextTextTextTextTextTextTextText<br>
-        TextTextTextTextTextTextTextTextTextTextTextTextTextText<br>
-        TextTextTextTextTextTextTextTextTextTextTextTextTextText
+        TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText<br>
+        TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText<br>
+        TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText<br>
+        TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
     </p>
 </section>
 
